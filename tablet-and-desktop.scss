@@ -225,6 +225,8 @@ nav, .subnav {
     background-color: transparent;
     border: 1px solid transparent;
     line-height: 55px;
+    font-weight: bold;
+    text-transform: uppercase;
     @include border-radius(0);
     a {
       display: block;

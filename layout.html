@@ -41,8 +41,6 @@
         <div class="header-container clearfix {% if site.has_background_image? %}no-background{% endif %}">
           <div class="width-container clearfix">
 
-            {% include "nav" %}
-
             {% if site.has_meta_image? %}
               <div class="site-logo">
                 <header><a href="/"><img src="{{ site.meta_image_url }}"></a></header>
@@ -57,6 +55,12 @@
           <!-- .width-container -->
         </div>
         <!-- .header-container -->
+
+        <div class="main-container" id="top-nav">
+          <div class="width-container">
+            {% include "nav" %}
+          </div>
+        </div>
 
         {% if site.has_header_image? %}
         <div class="width-container">

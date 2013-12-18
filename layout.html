@@ -39,19 +39,27 @@
       <div id="body" class="page-{{ request.template | replace: '_', '-' }}">
 
         <div class="header-container clearfix {% if site.has_background_image? %}no-background{% endif %}">
-          <div class="width-container clearfix">
+          <div class="width-container clearfix"> 
 
-            <a href="#menu" class="menu-link"><i class="icon-menu"></i></a>         
+          <a href="#menu" class="menu-link"><i class="icon-menu"></i></a>         
 
+            <div class="row-fluid">              
             {% if site.has_meta_image? %}
               <div class="site-logo">
-                <header><a href="/"><img src="{{ site.meta_image_url }}"></a></header>
+                <header class="span6"><a href="/"><img src="{{ site.meta_image_url }}"></a></header>
               </div>
             {% else %}
-              <header>
+              <header class="span6">
                 <h1 class="title"><a href="/">{{ site.long_name }}</a></h1>
               </header>
             {% endif %}
+
+              <div class="desktop-visible span5 offset1">
+                {% if site.has_signup_page? %}
+                {% include "signup_form" with site.signup_page %}
+                {% endif %}
+              </div>
+            </div>
 
           </div>
           <!-- .width-container -->

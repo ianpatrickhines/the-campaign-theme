@@ -1,0 +1,31 @@
+{% if site.has_button3? %}
+
+<span class="span4">
+	<a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+</span>
+
+<span class="span4">
+	<a class="button supporter-nav-button" href="{{ site.button2_page.full_url_with_profile_recruiter }}">{{ site.button2_text }}</a>
+</span>
+
+<span class="span4">
+	<a class="button supporter-nav-button" href="{{ site.button3_page.full_url_with_profile_recruiter }}">{{ site.button3_text }}</a>
+</span>
+
+{% elsif site.has_button2? %}	
+
+<span class="span6">
+	<a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+</span>
+
+<span class="span6">
+	<a class="button supporter-nav-button" href="{{ site.button2_page.full_url_with_profile_recruiter }}">{{ site.button2_text }}</a>
+</span>
+
+{% else %}
+
+<div class="span12">
+<a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+</div>
+
+{% endif %}

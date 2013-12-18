@@ -1,0 +1,109 @@
+{% if page.is_homepage? %}
+
+{% include "breadcrumbs" %}
+
+<div class="row-fluid" style="margin-top: -5px; margin-bottom: 39px;">
+{% comment %}<div class="span4">
+  {% if site.has_button1? %}
+<a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+{% endif %}
+</div>
+
+<div class="span4">
+  {% if site.has_button2? %}
+<a class="button supporter-nav-button" href="{{ site.button2_page.full_url_with_profile_recruiter }}">{{ site.button2_text }}</a>
+{% endif %}
+</div>
+  
+  <div class="span4">
+  {% if site.has_button3? %}
+<a class="button supporter-nav-button" href="{{ site.button3_page.full_url_with_profile_recruiter }}">{{ site.button3_text }}</a>
+{% endif %}
+</div>{% endcomment %}
+
+{% include "home_buttons" %}
+
+</div>
+
+<hr style="padding-bottom:20px;" />
+
+<div class="row-fluid">
+  <div class="span8">
+{% if page.headline.size > 0 %}
+<h2 class="headline">{{ page.headline }}</h2>
+<hr/>
+{% endif %}
+
+<div id="content">
+
+  {% comment %}<div id="intro" class="intro">
+    <div class="text-content">
+      {{ page.basic.content }}
+    </div>
+  </div>{% endcomment %}
+ 
+  
+  {% subpage "blog" with "blog_latest" %}
+
+  {% if page.tags_count > 0 %}
+  <div class="page-tags">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %}
+
+  {% comment %}<div class="like-page">
+    <strong>Do you like this page?</strong>
+    {% include "like_page" %}
+  </div>{% endcomment %}
+
+  {% if page.show_stream? %}
+  {% include "page_stream" %}
+  {% endif %}
+
+</div>
+  </div>
+
+  <div class="span4">
+    <div class="padbottommore">
+    <a class="twitter-timeline" href="https://twitter.com/ianpatrickhines" data-widget-id="400124565587623936">Tweets by @ianpatrickhines</a>
+    </div>
+    <div class="box">
+    <div class="fb-like-box" data-href="http://www.facebook.com/ian.p.hines" data-height="350" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+
+{% include "breadcrumbs" %}
+
+{% if page.headline.size > 0 %}
+<h2 class="headline">{{ page.headline }}</h2>
+{% endif %}
+
+<div id="content">
+
+  <div id="intro" class="intro">
+    <div class="text-content">
+      {{ page.basic.content }}
+    </div>
+  </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="page-tags">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %}
+
+  <div class="like-page">
+    <strong>Do you like this page?</strong>
+    {% include "like_page" %}
+  </div>
+
+  {% if page.show_stream? %}
+  {% include "page_stream" %}
+  {% endif %}
+
+</div>
+
+{% endif %}

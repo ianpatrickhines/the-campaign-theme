@@ -826,10 +826,9 @@ ul#page-stream {
 // container for entire header area
 
 .header-container {
-  /* padding-bottom: 40px; */
+  padding-top: 15px;
   min-height: 120px;
   background: url($header-texture) repeat-x $header-color;
-  border-top: 4px solid $theme-color-3;
 }
 
 // site wide footer

@@ -45,6 +45,7 @@ $asbestos: #7f8c8d;
 
 $light-color: $pomegranate;
 $dark-color: $belize-hole;
+$font-color: #5A6673;
 
 $theme-color-1: $dark-color;
 $theme-color-2: $dark-color;
@@ -63,7 +64,8 @@ $green: $emerald;
 // background images
 $background-texture: "";
 $header-texture: "";
-$header-color: $dark-color;
+$header-color: transparent;
+$top-nav-color: $dark-color;
 
 //* main responsive components *//
 
@@ -353,10 +355,10 @@ iframe[src *= 'youtube'] {
 // site title shown in header
 
 .title {
-  color: #fff;
+  color: $font-color;
   font-weight: normal;  
   a {
-    color: #fff;
+    color: $font-color;
   }
 }
 

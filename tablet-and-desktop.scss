@@ -74,6 +74,14 @@ $header-texture: "";
 
 // page layout if the sidebar is turned on
 
+.not-on-tablet {
+  display: inline;
+}
+
+.not-on-desktop {
+  display: none;
+}
+
 .twocolumn-container {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -107,7 +115,7 @@ $header-texture: "";
 // wraps your site name or site logo
 
 header {
-  max-width: 27.875243664717%;
+  // max-width: 27.875243664717%;
   // 286px ÷ 1140px
   float: left;
   padding: 35px 0 20px 30px;
@@ -194,12 +202,12 @@ nav, .subnav {
   background-color: transparent;
   border-right: 0;
   border-top: 0;
-  float: right;
+  // float: right;
   height: auto;
-  max-width: 68.2261208577%;
+  // max-width: 68.2261208577%;
   margin-top: 25px;
   // 700px ÷ 1026px
-  margin-left: 1.949317738791%;
+  // margin-left: 1.949317738791%;
   // 20px ÷ 1026px
   position: static;
   width: auto;
@@ -212,12 +220,12 @@ nav, .subnav {
   }
   li {
     display: inline-block;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 0 0;
     position: relative;
     background-color: transparent;
     border: 1px solid transparent;
     line-height: 55px;
-    @include border-radius(2px);
+    @include border-radius(0);
     a {
       display: block;
       width: 100%;
@@ -260,6 +268,7 @@ nav, .subnav {
     background-color: $light-color;
     border-color:transparent;
     @include border-radius(0);
+    padding: 10px 0;
 
     &.mobile-visible {
       display: none;
@@ -606,6 +615,14 @@ ul#page-stream {
       display: none;
     }
   }
+
+  .not-on-tablet {
+    display: none;    
+  }
+
+  .not-on-desktop {
+    display: inline;
+  }
 }
 
 // Desktop above 1140px styles
@@ -660,4 +677,10 @@ ul#page-stream {
     }
   }
 
+}
+
+// Top navigation
+
+#top-nav {
+  background: $dark-color;
 }

@@ -268,7 +268,7 @@ nav, .subnav {
     background-color: $light-color;
     border-color:transparent;
     @include border-radius(0);
-    padding: 10px 0;
+    padding: 0 0 10px 0;
 
     &.mobile-visible {
       display: none;

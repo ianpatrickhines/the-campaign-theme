@@ -15,6 +15,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="theme.scss" type="text/css">
   <link rel="stylesheet" href="tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet" type="text/css">
 
   <!-- because ie8 ignores media queries, we need this -->
   <!--[if IE 8]>
@@ -45,8 +46,8 @@
 
             <div class="row-fluid">              
             {% if site.has_meta_image? %}
-              <div class="site-logo">
-                <header class="span6"><a href="/"><img src="{{ site.meta_image_url }}"></a></header>
+              <div class="site-logo span6">
+                <header><a href="/"><img src="{{ site.meta_image_url }}"></a></header>
               </div>
             {% else %}
               <header class="span6">
@@ -54,7 +55,7 @@
               </header>
             {% endif %}
 
-              <div class="desktop-visible span5 offset1">
+              <div class="desktop-visible span5 offset1 padtopmore">
                 {% if site.has_signup_page? %}
                 {% include "signup_form" with site.signup_page %}
                 {% endif %}

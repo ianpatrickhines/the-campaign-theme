@@ -6,10 +6,10 @@
 //* style variables *//
 
 // headline font
-$headline-font: "Avenir Next", Helvetica, sans-serif;
+$headline-font: 'Open Sans', Helvetica, sans-serif;
 
 // main font
-$font: "Avenir Next", Helvetica, sans-serif;
+$font: 'Open Sans', Helvetica, sans-serif;
 
 // flat ui colors
 $turquoise: #1abc9c;
@@ -43,8 +43,8 @@ $silver: #bdc3c7;
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
-$light-color: $pomegranate;
-$dark-color: $belize-hole;
+$light-color: #299EC9;
+$dark-color: #354A6E;
 
 $theme-color-1: $dark-color;
 $theme-color-2: $clouds;
@@ -128,8 +128,13 @@ header {
     float: left;
     text-align: left;
     padding: 0 0 20px 0;
-    max-width: 27.875243664717%;
+    // max-width: 27.875243664717%;
     margin-left: 0;
+  }
+
+  header img {
+    max-width: 100%;
+    max-height: 100px;
   }
 }
 
@@ -269,7 +274,6 @@ nav, .subnav {
     display: block;
     background-color: $light-color;
     border-color:transparent;
-    @include border-radius(0);
     padding: 0 0 10px 0;
 
     &.mobile-visible {
@@ -302,6 +306,8 @@ nav, .subnav {
   background: transparent;
   border: 1px solid $theme-color-5;
   color: $theme-color-1;
+  @include border-radius(2px);
+  margin: 0 10px 10px 0;
 }
 
 .subnav li a {

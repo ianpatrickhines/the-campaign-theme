@@ -1,4 +1,4 @@
-{% include "breadcrumbs" %}
+
 
 {% if page.headline.size > 0 %}
 <h2 class="headline">{{ page.headline }}</h2>
@@ -44,20 +44,16 @@
 <div class="form-wrap">
   <div class="form">
 
-    <div class="padtopmore"><h3>Thank you for signing!</h3></div>
+    <h3>Thank you for signing!</h3>
 
     <div class="form-errors">{% error_messages_for petition_signatures %}</div>
 
     {% if page.is_commentable? %}
-    <p>
-      <label for="petition_signature_content">Change your comment</label><br/>{% text_area "content", class:"textarea autogrow" %}
-    </p>
+      <label for="petition_signature_content">Change your comment</label>{% text_area "content", class:"textarea autogrow" %}
     {% endif %}
 
     {% if page.petition.is_image? %}
-    <p>
-      <label for="petition_signature_image">Upload a picture (140x140)</label><br/>{% file_field "image", class:"file" %}
-    </p>
+      <label for="petition_signature_image">Upload a picture (140x140)</label>{% file_field "image", class:"file" %}
     {% if petition_signature.has_image? %}
     <p><img src="{{ petition_signature.large_square_image_url }}" width="140" height="140" border="0"/></p>
     {% endif %}

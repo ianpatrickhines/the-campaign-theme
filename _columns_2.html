@@ -5,6 +5,11 @@
     {{ content_for_notifications }}
 
     <div class="content-{{ request.template  | replace: '_', '-' }}">
+
+      {% include "breadcrumbs" %}
+
+      {% if page.features_count > 0 %}<div class="featured-content-slider">{% include "features" %}</div>{% endif %}
+      
       {% yield %}
     </div>
 

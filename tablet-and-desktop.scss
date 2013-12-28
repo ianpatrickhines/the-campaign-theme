@@ -6,10 +6,10 @@
 //* style variables *//
 
 // headline font
-$headline-font: 'Open Sans', Helvetica, sans-serif;
+$headline-font: "chaparral-pro", Helvetica, sans-serif;
 
 // main font
-$font: 'Open Sans', Helvetica, sans-serif;
+$font: "myriad-pro", Helvetica, sans-serif;
 
 // flat ui colors
 $turquoise: #1abc9c;
@@ -43,8 +43,14 @@ $silver: #bdc3c7;
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
-$light-color: $peter-river;
-$dark-color: $belize-hole;
+// campaign colors
+
+$cp-blue: #253477;
+$cp-orange: #F26A2F;
+
+$light-color: $cp-orange;
+$dark-color: $cp-blue;
+$font-color: #5A6673;
 
 $theme-color-1: $dark-color;
 $theme-color-2: $clouds;
@@ -340,7 +346,7 @@ nav, .subnav {
   }
   input[type="radio"]:checked+label, input[type="checkbox"]:checked+label {
     background-color: transparent !important;
-    color: #5A6673 !important;
+    color: $font-color !important;
     border: transparent !important;
   }
   label {
@@ -356,7 +362,7 @@ nav, .subnav {
     width: auto;
     background-color: transparent !important;
     font-family: $font;
-    color: #5A6673 !important;
+    color: $font-color !important;
     font-size: 15px;
     font-weight: normal;
     text-align: left;

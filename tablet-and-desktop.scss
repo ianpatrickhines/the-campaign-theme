@@ -43,8 +43,8 @@ $silver: #bdc3c7;
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
-$light-color: #299EC9;
-$dark-color: #354A6E;
+$light-color: $peter-river;
+$dark-color: $belize-hole;
 
 $theme-color-1: $dark-color;
 $theme-color-2: $clouds;
@@ -285,7 +285,7 @@ nav, .subnav {
     padding: 5px 20px 5px 22px;
 
     &:hover {
-      background-color: $alizarin; // subnav dropdown hover color
+      background-color: $dark-color; // subnav dropdown hover color
       text-decoration: none;
     }
   }
@@ -339,8 +339,9 @@ nav, .subnav {
     display: inline-block;
   }
   input[type="radio"]:checked+label, input[type="checkbox"]:checked+label {
-    background-color: transparent;
-    color: #5A6673;
+    background-color: transparent !important;
+    color: #5A6673 !important;
+    border: transparent !important;
   }
   label {
     display: block;
@@ -353,14 +354,15 @@ nav, .subnav {
     top: 2px;
     display: inline-block;
     width: auto;
-    background-color: transparent;
+    background-color: transparent !important;
     font-family: $font;
-    color: #5A6673;
+    color: #5A6673 !important;
     font-size: 15px;
     font-weight: normal;
     text-align: left;
     padding: 0;
     margin: 0 10px 10px 5px;
+    border: transparent !important;
   }
   label.checkbox {
     position: relative;
@@ -691,4 +693,11 @@ ul#page-stream {
 
 #top-nav {
   background: $dark-color;
+}
+
+// Remove border from header-container
+
+.header-container {
+  border-bottom: none;
+  padding-bottom: 0;
 }

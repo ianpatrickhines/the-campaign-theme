@@ -43,8 +43,8 @@ $silver: #bdc3c7;
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
-$light-color: #299EC9;
-$dark-color: #354A6E;
+$light-color: $peter-river;
+$dark-color: $belize-hole;
 $font-color: #5A6673;
 
 $theme-color-1: $dark-color;
@@ -439,7 +439,7 @@ nav {
 // page layout if the sidebar is turned on
 
 .twocolumn-container {
-  margin-top: 30px;
+  margin-top: 15px;
   .left-column, .right-column-wide {
     background-color: #fff;
     padding: 20px 0;
@@ -459,7 +459,7 @@ nav {
   padding: 0 0 20px 0;
   @include border-radius(5px);
   border: 1px solid transparent;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 
@@ -827,8 +827,10 @@ ul#page-stream {
 
 .header-container {
   padding-top: 0px;
+  padding-bottom: 15px;
   min-height: 120px;
   background: url($header-texture) repeat-x $header-color;
+  border-bottom: 40px solid $dark-color;
 }
 
 // site wide footer
@@ -1844,4 +1846,24 @@ input:focus, textarea:focus {
 // Make forms & leaderboards have proper background color
 .form-wrap, .people-list.odd, .pagination .active, .pagination a:hover, .table-striped tbody > tr:nth-child(odd) > td {
   background-color: $theme-color-7 !important;
+}
+
+// Radio buttons on mobile
+
+.radio {
+  background-color: $light-color !important;
+  border: 1px solid $light-color;
+  color: #fff !important;
+}
+
+.radio:active, input[type="radio"]:checked+label {
+  background-color: $dark-color !important;
+  border: 1px solid $dark-color !important;
+  color: #fff !important;
+}
+
+// Bold links in content area
+
+#content p a {
+  font-weight: bold;
 }

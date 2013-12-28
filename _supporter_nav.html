@@ -92,8 +92,12 @@
 
 </ul>
 
-{% if site.has_button1? %}
-<a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+{% if request.logged_in? and request.current_signup.has_email? %}
+{% elsif request.sorta_logged_in? and request.current_signup.has_email? %}
+{% else %}
+  {% if site.has_button1? %}
+  <a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+  {% endif %}
 {% endif %}
 
 {% if site.has_button2? %}

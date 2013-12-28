@@ -10,11 +10,15 @@
 	</div>
 	{% if request.logged_in? and request.current_signup.has_email? %}
 	<div class="padtopmore">
-		<a class="button supporter-nav-button" href="/donate">Donate</a>
+		{% if site.has_button1? %}
+		    <a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+	    {% endif %}
 	</div>
 	{% elsif request.sorta_logged_in? and request.current_signup.has_email? %}
 	<div class="padtopmore">
-		<a class="button supporter-nav-button" href="/donate">Donate</a>
+		{% if site.has_button1? %}
+		    <a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+	    {% endif %}
 	</div>
 	{% else %}
 	<div class="email-signup form">

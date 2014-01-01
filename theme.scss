@@ -1842,7 +1842,7 @@ h4.expander-head {
 
 .bg-theme-color-1:hover {
   background-color: $theme-color-1;
-	color: #fff;
+  color: #fff;
 }
 
 /* Remove box shadow from form fields */
@@ -1875,4 +1875,74 @@ input:focus, textarea:focus {
 
 #content p a {
   font-weight: bold;
+}
+
+// homepage widgets
+
+ul.homepage_excerpt-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li.excerpt-block {
+    list-style: none;
+    background: #f8f8f8;
+    border-bottom: 2px solid $theme-color-3;
+    @include border-radius(2px);
+    margin-bottom: 15px;
+    padding: 25px 25px;
+    overflow: hidden;
+    .event-map {
+      margin: 20px 0;
+    }
+    .event-block {
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 3px solid #ddd;
+    }
+    .event-venue {
+      margin: 0;
+    }
+    .progress {
+      margin-bottom: 0;
+    } 
+    ul.question-list {
+      margin: 15px 0 0 15px;
+      border: none;
+    }
+    .leaderboard:last-child {
+      margin-bottom: 0;
+    }
+    .rule-list li:last-child {
+      padding: 0;
+    }
+    .byline {
+      margin-top: -10px;
+    }
+    .answer-wrap {
+      background-color: #eee;
+    }
+    .answer .icon-up-dir:before  {
+      color: #eee;
+    }
+  }
+  h3.excerpt-type {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #777;
+    font-weight: normal;
+    font-family: $font;
+    margin-bottom: 15px;
+    a {
+      color: #777;
+      text-decoration: none;
+    }
+  }
+  h4.excerpt-title {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+  .continue {
+    display: block;
+    margin: 1em 0;
+  }
 }

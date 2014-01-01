@@ -139,7 +139,7 @@ header {
   }
 
   header img {
-    max-width: 100%;
+    max-width: 490px;
     max-height: 100px;
   }
 }
@@ -555,50 +555,54 @@ ul#page-stream {
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 // off canvas nav to be used on tablets, since drop downs don't work on touch devices
 
-  nav {
-    @include mobile-nav;
-    float: none;
-    margin: 0;
-    li {
-      margin: 0;
-      padding: 0;
-      @include border-radius(0);
-      line-height: 21px;
-      &.active, &.drop {
-        background-color: $theme-color-4;
-        border-bottom: 1px solid darken($theme-color-4, 15);
-      }
-      a {
-        padding: .8em;
-      }
-    }
-    .sub {
-      position: static;
-      width: 100%;
-      padding: 0;
-      li {
-        border-bottom: 1px solid darken($theme-color-4, 15);
-        background-color: darken($theme-color-4, 5);
-        &:last-child {
-          margin-bottom: 0;
-        }
-        a {
-          padding: 12px;
-        }
-        &.mobile-visible {
-          display: block;
-        }
-      }
-    }
+  .header-container {
+    border-bottom: 40px solid $dark-color;
   }
 
-  .menu-link {
-    display: block;
-  }
+  // nav {
+  //   @include mobile-nav;
+  //   float: none;
+  //   margin: 0;
+  //   li {
+  //     margin: 0;
+  //     padding: 0;
+  //     @include border-radius(0);
+  //     line-height: 21px;
+  //     &.active, &.drop {
+  //       background-color: $theme-color-4;
+  //       border-bottom: 1px solid darken($theme-color-4, 15);
+  //     }
+  //     a {
+  //       padding: .8em;
+  //     }
+  //   }
+  //   .sub {
+  //     position: static;
+  //     width: 100%;
+  //     padding: 0;
+  //     li {
+  //       border-bottom: 1px solid darken($theme-color-4, 15);
+  //       background-color: darken($theme-color-4, 5);
+  //       &:last-child {
+  //         margin-bottom: 0;
+  //       }
+  //       a {
+  //         padding: 12px;
+  //       }
+  //       &.mobile-visible {
+  //         display: block;
+  //       }
+  //     }
+  //   }
+  // }
 
-  .wrap.active {
-    left: 16em;
-  }
+  // .menu-link {
+  //   display: block;
+  // }
+
+  // .wrap.active {
+  //   left: 16em;
+  // }
 
 // javascript is used to wrap all iframes in a span called responsive-embed-wrapper to make them responsive.
 // once the iframe is wrapped in said span, it will be shown.

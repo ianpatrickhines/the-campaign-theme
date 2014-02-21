@@ -3,7 +3,7 @@ Created by Ian Patrick Hines
 
 *February 20, 2014*
 
-Original: [flatly-aware.ianpatrickhines.com](http://flatly-aware.ianpatrickhines.com)
+Original: [campaign.ianpatrickhines.com](http://campaign.ianpatrickhines.com)
 
 License: The MIT License (MIT) (See [LICENSE.markdown](https://github.com/ianpatrickhines/the-campaign-theme/blob/master/LICENSE.markdown))
 
